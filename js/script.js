@@ -27,8 +27,6 @@ function creaColonne() {
         box.setAttribute('class', 'box')
         box.innerHTML = `${i}`
         div[0].append(box)
-        numeri.push(i)
-        const numeriSingoli = numeri.slice('')
         box.addEventListener("click", changeBg)
     }
     return numeri
@@ -53,8 +51,6 @@ function creaColonne2() {
         box.setAttribute('class', 'box')
         box.innerHTML = `${i}`
         div[0].append(box)
-        numeri.push(i)
-        const numeriSingoli = numeri.slice('')
         box.addEventListener("click", changeBg)
 
     }
@@ -70,7 +66,6 @@ function stampareGriglia3() {
     div.setAttribute('class', 'div-49');
     container.append(div);
     let createCols = creaColonne3()
-    generateBomb(numeri)
 }
 function creaColonne3() {
     let cols = ""
@@ -79,14 +74,14 @@ function creaColonne3() {
     for (let i = 1; i <= 49; i++) {
         let box = document.createElement("div")
         box.setAttribute('class', 'box')
+        generateBomb(numeri)
         box.innerHTML = `${i}`
         div[0].append(box)
-        numeri.push(i)
-        const numeriSingoli = numeri.slice('')
         box.addEventListener("click", changeBg)
-        generateBomb(numeri)
+
     }
-    return numeri
+    
+
 }
 
 
@@ -96,15 +91,16 @@ function changeBg() {
 
 const bombNumber = 16
 let bombs = []
-let maxAttempts
+let maxAttempts 
 
 function generateBomb(numeri) {
-    maxAttempts = numeri - bombNumber
+    maxAttempts = i - bombNumber
     while (bombs.length < bombNumber) {
-        let createdBombs = getRandomInt(1, numeri)
+        let createdBombs = getRandomInt(1, i)
         if (!bombs.includes(createdBombs)) {
             bombs.push(createdBombs)
         }
     }
 
 }
+console.log(generateBomb)
