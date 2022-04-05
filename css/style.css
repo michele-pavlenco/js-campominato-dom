@@ -1,0 +1,55 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: turquoise;
+
+}
+.level{
+    font-size: 25px;
+}
+button {
+    height: 30px;
+    width: 30px;
+    border-radius: 100%;
+}
+.div-100{
+    width: 500px;
+    height: 500px;
+    margin-top: 100px;
+}
+.div-81{
+    width: 450px;
+    height: 450px;
+    margin-top: 100px;
+}
+.div-49{
+    width: 350px;
+    height: 350px;
+    margin-top: 100px;
+}
+
+div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+
+.box{
+       display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+border: 1px solid black;
+}
+.blue{
+    background-color: rgb(24, 129, 199);
+}
+.box:active{
+    background-color: red;
+}
